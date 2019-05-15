@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "name": "parrotkesha/redmine_sync",
+  "description": "Academy homework",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Ignat Krasnov",
+      "email": "parrotkesha27@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require-dev": {
+    "phpunit/phpunit": "^8"
+  },
+  "autoload": {
+    "classmap": [
+      "src"
+    ]
+  },
+  "require": {
+    "php": "^7.0",
+    "danielstieber/coda-php": "^0.0.3",
+    "kbsali/redmine-api": "dev-master",
+    "ext-yaml": "*"
+  }
+}

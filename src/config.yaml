@@ -1,0 +1,10 @@
+redmine:
+  period: 'cd'
+  limit: 10
+  url: 'http://redmine.aeroidea.ru'
+  key: 'f33395df8642f4b86e877a63d0257394907f71a2'
+
+coda:
+  token: '8fb499d7-8f0a-40bf-ae4e-d59293898cdd'
+  doc: 'Mx9opa5rQf'
+  table: 'Redmine'
