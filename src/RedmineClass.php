@@ -11,6 +11,13 @@ class RedmineClass
     protected $limit;
     protected $client;
 
+    /**
+     * RedmineClass constructor.
+     * @param string $period Период, за который нужно получить данные
+     * @param int $limit Количество получаемых строк
+     * @param string $url URL Redmine
+     * @param string $key Ключ доступа
+     */
     public function __construct(string $period, int $limit, string $url, string $key)
     {
         $this->period = $period;
@@ -18,6 +25,10 @@ class RedmineClass
         $this->client = new Redmine\Client($url, $key);
     }
 
+    /**
+     * @return array
+     * @throws \Exception
+     */
     public function getData() : array
     {
         $allTimes = $this->client->time_entry->all(['spent_on'=>$this->period, 'limit' => $this->limit]);

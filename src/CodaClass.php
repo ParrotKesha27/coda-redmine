@@ -11,6 +11,12 @@ class CodaClass
     protected $doc;
     protected $table;
 
+    /**
+     * CodaClass constructor.
+     * @param string $token Токен
+     * @param string $doc ID документа
+     * @param string $table Таблица, в которую будет выгружена информация
+     */
     public function __construct(string $token, string $doc, string $table)
     {
         $this->client = new CodaPHP\CodaPHP($token);
@@ -18,7 +24,11 @@ class CodaClass
         $this->table = $table;
     }
 
-    public function addData(array $data)
+    /**
+     * @param array $data Массив данных, полученных с Redmine
+     * @return bool
+     */
+    public function addData(array $data) : bool
     {
         $arCodaTimes = $this->client->listRows($this->doc, $this->table);
 
