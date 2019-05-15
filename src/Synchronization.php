@@ -3,6 +3,8 @@
 
 namespace Academy;
 
+use Symfony\Component\Yaml\Yaml;
+
 class Synchronization
 {
     protected $codaClient;
@@ -10,7 +12,7 @@ class Synchronization
 
     public function __construct($config)
     {
-        $arConfig = yaml_parse_file($config);
+        $arConfig = Yaml::parseFile($config);
         $redmineConfig = $arConfig['redmine'];
         $codaConfig = $arConfig['coda'];
 
