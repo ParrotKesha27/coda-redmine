@@ -21,7 +21,7 @@
   "require": {
     "php": "^7.0",
     "danielstieber/coda-php": "^0.0.3",
-    "kbsali/redmine-api": "dev-master",
+    "kbsali/redmine-api": "^1.5",
     "ext-yaml": "*"
   }
 }
